@@ -9,6 +9,7 @@
 - ReactJs
 - ReactNative
 - SQLite
+- Expo
 
 ## A aplicação
 
@@ -33,8 +34,8 @@ Está é uma aplicação para uso de ONGs e pessoas que tem interesses em ajudar
 
 ## Testando a aplicação
 
-##### Você pode ver a aplicação online clicando [aqui](https://ongbethehero.netlify.app/) ou pode baixar os arquivos e rodar o seguinte comando dentro de cada uma das 3 pastas
+##### Você pode ver a aplicação online clicando [aqui](https://ongbethehero.netlify.app/) ou pode baixar os arquivos e rodar o seguinte comando dentro de cada uma das 2 pastas
 
 ``` npm install ```
 
-##### É necessário ter o [npm](https://nodejs.org/en/) instalado (ou você pode usar [yarn](https://yarnpkg.com/) caso assim prefira) além do [Expo](https://expo.io/) para rodar o projeto mobile.
+##### É necessário ter o [npm](https://nodejs.org/en/) instalado (ou você pode usar [yarn](https://yarnpkg.com/) caso assim prefira.
