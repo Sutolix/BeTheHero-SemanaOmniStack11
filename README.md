@@ -38,4 +38,4 @@ Está é uma aplicação para uso de ONGs e pessoas que tem interesses em ajudar
 
 ``` npm install ```
 
-##### É necessário ter o [npm](https://nodejs.org/en/) instalado (ou você pode usar [yarn](https://yarnpkg.com/) caso assim prefira.
+##### É necessário ter o [npm](https://nodejs.org/en/) instalado ou você pode usar [yarn](https://yarnpkg.com/) caso assim prefira.
