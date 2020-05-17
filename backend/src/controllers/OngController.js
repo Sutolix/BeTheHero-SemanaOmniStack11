@@ -6,10 +6,18 @@ const crypto = require('crypto');
 module.exports = {
 
     async index (request, response) {
-    
-    const ongs = await connection('ongs').select('*');
+
+    const admin_id = '1e6c96e2';
+    const verify = request.headers.authorization;
+
+    if (verify !== admin_id){
+        return response.status(401).json({ error: 'Operation not permitted.' });
+    }else{
+        const ongs = await connection('ongs').select('*');
         
-    return response.json(ongs);
+        return response.json(ongs);
+    } 
+    
     
     },
 
@@ -28,5 +36,27 @@ module.exports = {
         })
 
         return response.send({ id });
+    },
+
+    async delete(request, response) {
+        const { id } = request.params;
+        const admin_id = request.headers.authorization;
+
+        //Verifica se quem está tentando deletar o incident é a mesma ong que o criou
+        const ong = await connection('ongs')
+            .where('id', id)
+            .select('id')
+            //como haverá só uma ong com o id fornecido, pode se usar o first pra pegar ele
+            .first();
+
+        if (admin_id !== '1e6c96e2') {
+            //status de não autorizado
+            return response.status(401).json({ error: 'Operation not permitted.' });
+        }
+
+        //Apaga o incident
+        await connection('ongs').where('id', id).delete();
+        //status de que foi concluído com sucesso mas não há nada para retornar
+        return response.status(204).send();
     }
 };
