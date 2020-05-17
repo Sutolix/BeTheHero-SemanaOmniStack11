@@ -34,7 +34,7 @@ Está é uma aplicação para uso de ONGs e pessoas que tem interesses em ajudar
 
 ## Testando a aplicação
 
-##### Você pode ver a aplicação online clicando [aqui](https://ongbethehero.netlify.app/) ou pode baixar os arquivos e rodar o seguinte comando dentro de cada uma das 2 pastas
+##### Você pode ver a aplicação online clicando [aqui](https://ongbethehero.netlify.app/) ou pode baixar os arquivos e rodar o seguinte comando dentro de cada uma das 2 pastas:
 
 ``` npm install ```
 
