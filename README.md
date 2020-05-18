@@ -41,11 +41,11 @@ Está é uma aplicação para uso de ONGs e pessoas que tem interesses em ajudar
 ##### É necessário ter o [npm](https://nodejs.org/en/) instalado ou você pode usar [yarn](https://yarnpkg.com/) caso assim prefira, além do [Expo](https://expo.io/) para versão mobile.
 
 
-Após concluir as intalações, rode o seguinte comando no frontend e no backend para iniciar:
+##### Após concluir as intalações, rode o seguinte comando no frontend e no backend para iniciar:
 
 ```npm start```
 
-No mobile, execute:
+##### No mobile, execute:
 
 ```expo start```
 
