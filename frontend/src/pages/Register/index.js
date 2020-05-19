@@ -11,7 +11,7 @@ import logoImg from '../../assets/logo.svg'
 export default function Register(){
 	const [name, setName] = useState('');
 	const [email, setEmail] = useState('');
-	const [whatsapp, setWhatsapp] = useState('');
+	const [tel, setWhatsapp] = useState('');
 	const [city, setCity] = useState('');
 	const [uf, setUf ] = useState('');
 
@@ -19,6 +19,8 @@ export default function Register(){
 
 	async	function handleRegister(e){
 		e.preventDefault();
+
+		const whatsapp = '55' + tel
 
 		const data = {
 			name,
@@ -71,7 +73,7 @@ export default function Register(){
 						/>
 						<input
 							placeholder="WhatsApp"
-							value={whatsapp}
+							value={tel}
 							onChange={e => setWhatsapp(e.target.value)}
 						/>
 
